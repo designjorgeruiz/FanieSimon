@@ -43,7 +43,7 @@
 
 /* ── Reset ──────────────────────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 body {
   margin: 0;
   color: var(--espresso);
@@ -1018,17 +1018,64 @@ textarea { resize: vertical; min-height: 130px; }
 }
 
 @media (max-width: 760px) {
-  .page-section__inner { width: min(calc(100% - 36px), var(--page-width)); gap: 36px; }
+  /* ── Global ── */
+  body { overflow-x: hidden; }
+  .page-section__inner { width: min(calc(100% - 40px), var(--page-width)); gap: 36px; }
+
+  /* ── Header: hide language switch, leave brand + hamburger ── */
+  .site-header { padding: 10px 20px; }
+  .site-header .language-switch { display: none; }
+
+  /* ── Hero ── */
+  .hero-full { min-height: 100svh; }
+  .hero-full__content {
+    padding: 0 24px clamp(80px, 14vw, 110px);
+    max-width: 100%;
+    gap: 12px;
+  }
+  .hero-full__name {
+    font-size: clamp(2.6rem, 10vw, 4rem);
+    white-space: nowrap;
+  }
+  .hero-full__eyebrow { font-size: 0.62rem; letter-spacing: 0.26em; }
+  .hero-full__tagline { font-size: 0.7rem; letter-spacing: 0.26em; }
+  .hero-full__rule { width: 32px; }
+  .hero-full__actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    margin-top: 12px;
+  }
+  .hero-full__actions .button {
+    width: 100%;
+    min-width: 0;
+    justify-content: center;
+    text-align: center;
+    padding: 14px 20px;
+  }
+
+  /* ── Manifesto ── */
+  .manifesto-quote { font-size: clamp(2rem, 8.5vw, 3rem); }
+
+  /* ── About ── */
+  .section-headline { font-size: clamp(1.8rem, 6.5vw, 2.4rem); }
   .about-cols { grid-template-columns: 1fr; }
   .about-col,
   .about-col:last-child { padding: 24px 0; border-left: none; border-top: 1px solid var(--linen); padding-left: 0; }
   .about-col:first-child { border-top: none; }
+
+  /* ── Process ── */
   .process-grid { grid-template-columns: 1fr; }
-  .hero-full__name { font-size: clamp(2rem, 9vw, 6rem); }
-  .section-header { flex-direction: column; align-items: flex-start; }
+  .process-header h2 { font-size: clamp(1.6rem, 6vw, 2rem); }
+
+  /* ── Catalog ── */
+  .section-header { flex-direction: column; align-items: flex-start; gap: 12px; }
   .catalog-card { min-height: 0; }
+  .filter-panel { gap: 10px; }
+  .filter-group { gap: 6px; flex-wrap: wrap; }
+
+  /* ── Contact form ── */
   .modal__meta { grid-template-columns: 1fr; }
   .form-grid { grid-template-columns: 1fr; }
-  .manifesto-quote { font-size: clamp(2.2rem, 9vw, 3.6rem); }
-  .hero-full__actions .button { min-width: 140px; }
+  .contact-cards { gap: 10px; }
 }
