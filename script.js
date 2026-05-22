@@ -844,10 +844,40 @@ const initialize = async () => {
   }
 };
 
+/* ── Mobile nav toggle ────────────────────────────────────────────── */
+const navToggle = byId("nav-toggle");
+const mobileNav = byId("mobile-nav");
+
+const openMobileNav = () => {
+  mobileNav.classList.add("is-open");
+  mobileNav.setAttribute("aria-hidden", "false");
+  navToggle.setAttribute("aria-expanded", "true");
+  navToggle.classList.add("is-open");
+  document.body.style.overflow = "hidden";
+};
+
+const closeMobileNav = () => {
+  mobileNav.classList.remove("is-open");
+  mobileNav.setAttribute("aria-hidden", "true");
+  navToggle.setAttribute("aria-expanded", "false");
+  navToggle.classList.remove("is-open");
+  document.body.style.overflow = "";
+};
+
+navToggle.addEventListener("click", () => {
+  mobileNav.classList.contains("is-open") ? closeMobileNav() : openMobileNav();
+});
+
+// Close when a nav link is clicked
+mobileNav.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", closeMobileNav);
+});
+
 document.addEventListener("click", (event) => {
   const langButton = event.target.closest("[data-lang]");
   if (langButton) {
     setLanguage(langButton.dataset.lang);
+    if (mobileNav.classList.contains("is-open")) closeMobileNav();
     return;
   }
 

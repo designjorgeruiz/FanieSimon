@@ -1022,9 +1022,8 @@ textarea { resize: vertical; min-height: 130px; }
   body { overflow-x: hidden; }
   .page-section__inner { width: min(calc(100% - 40px), var(--page-width)); gap: 36px; }
 
-  /* ── Header: hide language switch, leave brand + hamburger ── */
+  /* ── Header ── */
   .site-header { padding: 10px 20px; }
-  .site-header .language-switch { display: none; }
 
   /* ── Hero ── */
   .hero-full { min-height: 100svh; }
