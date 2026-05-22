@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fanie Simon | Art Catalogue</title>
+    <meta name="description" content="Fanie Simon — Swiss artist. Wood reliefs, mixed media sculptures, and ceremonial objects created in Basel with compassion and love." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css?v=20260426e" />
+  </head>
+  <body>
+
+    <!-- ── Floating navigation ────────────────────────────────────── -->
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Fanie Simon home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-copy">
+          <strong>Fanie Simon</strong>
+          <small id="brand-subtitle">Art catalogue</small>
+        </span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary">
+        <a id="nav-available" href="#catalog" data-status-filter="available">Available</a>
+        <a id="nav-collaborations" href="#catalog" data-status-filter="collaboration">Collaborations</a>
+        <a id="nav-records" href="#catalog" data-status-filter="documented">Records</a>
+        <a id="nav-archive" href="#catalog" data-status-filter="sold">Archive</a>
+        <a id="nav-contact" href="#contact">Contact</a>
+      </nav>
+
+      <div class="header-tools">
+        <div class="language-switch" id="language-switch" aria-label="Language switch">
+          <button class="language-switch__button" type="button" data-lang="en">EN</button>
+          <button class="language-switch__button" type="button" data-lang="de">DE</button>
+          <button class="language-switch__button" type="button" data-lang="es">ES</button>
+        </div>
+        <a class="button button--primary" id="header-cta" href="#catalog">Browse catalog</a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- ── Mobile navigation overlay ────────────────────────────────── -->
+    <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+      <div class="mobile-nav__inner">
+        <ul class="mobile-nav__links">
+          <li><a class="mobile-nav__link" id="mobile-nav-available" href="#catalog" data-status-filter="available">Available</a></li>
+          <li><a class="mobile-nav__link" id="mobile-nav-collaborations" href="#catalog" data-status-filter="collaboration">Collaborations</a></li>
+          <li><a class="mobile-nav__link" id="mobile-nav-records" href="#catalog" data-status-filter="documented">Records</a></li>
+          <li><a class="mobile-nav__link" id="mobile-nav-archive" href="#catalog" data-status-filter="sold">Archive</a></li>
+          <li><a class="mobile-nav__link" id="mobile-nav-contact" href="#contact">Contact</a></li>
+        </ul>
+        <div class="mobile-nav__footer">
+          <div class="language-switch" aria-label="Language">
+            <button class="language-switch__button" type="button" data-lang="en">EN</button>
+            <button class="language-switch__button" type="button" data-lang="de">DE</button>
+            <button class="language-switch__button" type="button" data-lang="es">ES</button>
+          </div>
+          <a class="button button--bark" id="mobile-nav-cta" href="#catalog">Browse catalog</a>
+        </div>
+      </div>
+    </div>
+
+    <main id="top">
+
+      <!-- ── 1. Video Hero ──────────────────────────────────────────── -->
+      <section class="hero-full">
+        <div class="hero-full__video-wrap" data-parallax="0.35">
+          <img class="hero-full__video" src="./assets/hero.png" alt="" aria-hidden="true" />
+          <div class="hero-full__grain" aria-hidden="true"></div>
+          <div class="hero-full__overlay" aria-hidden="true"></div>
+        </div>
+
+        <div class="hero-full__content">
+          <p class="hero-full__eyebrow reveal reveal--fade" id="hero-kicker">Basel · Switzerland</p>
+          <h1 class="hero-full__name reveal reveal--up">Fanie Simon</h1>
+          <div class="hero-full__rule" aria-hidden="true"></div>
+          <p class="hero-full__tagline reveal reveal--fade" id="hero-text">Wood · Ritual · Geometry</p>
+          <div class="hero-full__actions reveal reveal--up" data-delay="2">
+            <a class="button button--hero-primary" id="hero-primary-cta" href="#catalog">Explore Works</a>
+            <a class="button button--hero-ghost" id="hero-secondary-cta" href="#about">The Artist</a>
+          </div>
+          <!-- kept for JS translation binding -->
+          <span id="hero-title" class="sr-only">Fanie Simon</span>
+        </div>
+
+        <div class="hero-full__scroll" aria-hidden="true">
+          <div class="hero-full__scroll-line"></div>
+        </div>
+      </section>
+
+      <!-- ── 2. Manifesto pull quote ─────────────────────────────── -->
+      <section class="manifesto-section">
+        <p class="manifesto-quote reveal reveal--up" id="manifesto-quote">"Created with<br>passion and love"</p>
+        <p class="manifesto-byline reveal reveal--fade" data-delay="1" id="manifesto-byline">— Fanie Simon, Basel</p>
+      </section>
+
+      <!-- ── 3. About the Artist ────────────────────────────────── -->
+      <section id="about" class="page-section about-section">
+        <div class="page-section__inner">
+
+          <!-- Editorial header bar -->
+          <div class="about-header reveal reveal--fade">
+            <p class="eyebrow" id="about-kicker">Artist statement</p>
+          </div>
+
+          <!-- Headline + intro 2-col -->
+          <div class="about-intro-row">
+            <h2 class="section-headline reveal reveal--up" id="about-title">Wood treated as memory,<br>geometry, and atmosphere.</h2>
+            <p class="section-intro reveal reveal--fade" id="about-intro"></p>
+          </div>
+
+          <!-- Portrait + text content -->
+          <div class="about-body">
+            <figure class="portrait-card reveal reveal--up">
+              <div class="portrait-card__frame">
+                <img id="about-portrait" alt="Fanie Simon portrait" loading="lazy" />
+              </div>
+              <figcaption id="about-portrait-caption">Fanie Simon · Basel</figcaption>
+            </figure>
+
+            <div class="about-right">
+              <div class="about-cols">
+                <article class="about-col reveal reveal--up" data-delay="1">
+                  <h3 class="about-col__label" id="about-story-title">Practice</h3>
+                  <p id="about-story-1"></p>
+                  <p id="about-story-2"></p>
+                </article>
+                <article class="about-col reveal reveal--up" data-delay="2">
+                  <h3 class="about-col__label" id="about-materials-title">Materials</h3>
+                  <p id="about-materials-1"></p>
+                  <p id="about-materials-2"></p>
+                </article>
+              </div>
+              <aside class="about-quote-card reveal reveal--up" data-delay="3">
+                <p class="eyebrow" id="facts-kicker">Studio note</p>
+                <blockquote id="facts-quote"></blockquote>
+                <dl class="facts-list">
+                  <div>
+                    <dt id="facts-materials-label"></dt>
+                    <dd id="facts-materials-value"></dd>
+                  </div>
+                  <div>
+                    <dt id="facts-base-label"></dt>
+                    <dd id="facts-base-value"></dd>
+                  </div>
+                  <div>
+                    <dt id="facts-approach-label"></dt>
+                    <dd id="facts-approach-value"></dd>
+                  </div>
+                </dl>
+              </aside>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ── 4. Inspiration & Process ───────────────────────────── -->
+      <section class="process-section">
+        <div class="page-section__inner">
+          <div class="process-header">
+            <p class="eyebrow reveal reveal--fade">The Work</p>
+            <h2 class="reveal reveal--up">Mythology, geometry, and the warmth of hand-built form</h2>
+          </div>
+          <div class="process-grid">
+            <article class="process-card reveal reveal--up" data-delay="1">
+              <div class="process-card__symbol" aria-hidden="true">✦</div>
+              <h3>Mythology</h3>
+              <p>Fanie Simon draws from the rich cosmology of Aztec, Maya, and Hindu traditions. Deities like Chantico, Cihuacoatl, and Ganesha become vessels for exploring universal themes of nature, power, and transformation.</p>
+            </article>
+            <article class="process-card reveal reveal--up" data-delay="2">
+              <div class="process-card__symbol" aria-hidden="true">◈</div>
+              <h3>Sacred Geometry</h3>
+              <p>Each composition is built on precise geometric structures — circles, radial forms, and modular grids — that reference sacred architecture and ritual objects while remaining unmistakably contemporary.</p>
+            </article>
+            <article class="process-card reveal reveal--up" data-delay="3">
+              <div class="process-card__symbol" aria-hidden="true">◯</div>
+              <h3>Hand-Built Surfaces</h3>
+              <p>Every piece is built by hand in the Basel studio. Wood is cut, shaped, assembled, and finished with mirror, silk, dried flowers, or epoxy — layers that reward close looking and transform with the light.</p>
+            </article>
+            <article class="process-card reveal reveal--up" data-delay="4">
+              <div class="process-card__symbol" aria-hidden="true">◆</div>
+              <h3>Basel × Tulum</h3>
+              <p>The work holds two worlds: the precision of Swiss craft and the warmth of Mexican ceremony. This tension between order and ritual is the living edge of Fanie Simon's creative practice.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── 5. Unified Catalog ────────────────────────────────── -->
+      <section id="catalog" class="page-section catalog-section">
+        <div class="page-section__inner">
+          <div class="section-header">
+            <div>
+              <p class="eyebrow reveal reveal--fade" id="catalog-kicker">Catalog</p>
+              <h2 class="reveal reveal--up" id="catalog-title">All works.</h2>
+            </div>
+            <p class="section-intro reveal reveal--fade" id="catalog-intro"></p>
+          </div>
+          <div class="filter-panel reveal reveal--fade" id="filter-panel" aria-label="Catalog filters">
+            <div class="filter-group" id="status-filters"></div>
+            <div class="filter-group" id="shape-filters"></div>
+            <div class="filter-group" id="price-filters"></div>
+          </div>
+          <div class="section-meta">
+            <span id="catalog-count"></span>
+          </div>
+          <div class="catalog-grid" id="catalog-grid"></div>
+        </div>
+      </section>
+
+      <!-- ── 9. Contact ─────────────────────────────────────────── -->
+      <section id="contact" class="page-section contact-section">
+        <div class="page-section__inner">
+          <div class="section-header">
+            <div>
+              <p class="eyebrow reveal reveal--fade" id="contact-kicker">Contact</p>
+              <h2 class="reveal reveal--up" id="contact-title">Request pricing, availability,<br>or a commission brief.</h2>
+            </div>
+            <p class="section-intro reveal reveal--fade" id="contact-intro"></p>
+          </div>
+
+          <div class="contact-grid">
+            <div class="contact-cards">
+              <a class="contact-card reveal reveal--up" href="mailto:faniesimondesign@gmail.com" data-delay="1">
+                <span id="contact-email-label">Email</span>
+                <strong>faniesimondesign@gmail.com</strong>
+              </a>
+              <a class="contact-card reveal reveal--up" href="tel:+41798886682" data-delay="2">
+                <span id="contact-phone-label">Phone</span>
+                <strong>+41 79 888 66 82</strong>
+              </a>
+              <a class="contact-card reveal reveal--up" href="https://www.faniesimon.com/" target="_blank" rel="noreferrer" data-delay="3">
+                <span id="contact-website-label">Website</span>
+                <strong>faniesimon.com</strong>
+              </a>
+              <div class="contact-card reveal reveal--up" data-delay="4">
+                <span id="contact-studio-label">Studio</span>
+                <strong id="contact-studio-value">Basel, Switzerland</strong>
+              </div>
+            </div>
+
+            <form class="inquiry-form reveal reveal--up" id="inquiry-form" data-delay="1">
+              <div class="form-grid">
+                <label>
+                  <span id="form-name-label">Name</span>
+                  <input id="form-name" type="text" name="name" />
+                </label>
+                <label>
+                  <span id="form-email-label">Email</span>
+                  <input id="form-email" type="email" name="email" />
+                </label>
+                <label>
+                  <span id="form-type-label">Inquiry type</span>
+                  <select id="form-type" name="type"></select>
+                </label>
+                <label>
+                  <span id="form-piece-label">Piece</span>
+                  <input id="form-piece" type="text" name="piece" />
+                </label>
+                <label class="full-width">
+                  <span id="form-message-label">Message</span>
+                  <textarea id="form-message" name="message" rows="6"></textarea>
+                </label>
+              </div>
+              <button class="button button--primary" id="form-submit" type="submit">Open email draft</button>
+              <p class="form-note" id="form-note"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ── Footer ─────────────────────────────────────────────────── -->
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div class="site-footer__brand">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>Fanie Simon</span>
+        </div>
+        <p id="footer-text">Digital catalog · Basel, Switzerland · faniesimondesign@gmail.com</p>
+        <p class="site-footer__copy">© 2026 Fanie Simon. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- ── Artwork Modal ───────────────────────────────────────────── -->
+    <div class="modal" id="artwork-modal" aria-hidden="true">
+      <div class="modal__backdrop" data-close-modal></div>
+      <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div id="modal-content"></div>
+      </div>
+    </div>
+
+    <script src="./source-database/catalog-fallback.js?v=20260426e" defer></script>
+    <script src="./script.js?v=20260426e" defer></script>
+  </body>
+</html>
