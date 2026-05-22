@@ -476,7 +476,13 @@ const modal = byId("artwork-modal");
 const modalContent = byId("modal-content");
 let lastFocusedElement = null;
 
-const sortCatalog = (list) => [...list].sort((a, b) => (a.page || 999) - (b.page || 999) || a.title.localeCompare(b.title));
+const STATUS_PRIORITY = { available: 0, documented: 1, collaboration: 2, sold: 3 };
+const sortCatalog = (list) => [...list].sort((a, b) => {
+  const pa = STATUS_PRIORITY[a.status] ?? 4;
+  const pb = STATUS_PRIORITY[b.status] ?? 4;
+  if (pa !== pb) return pa - pb;
+  return (a.page || 999) - (b.page || 999) || a.title.localeCompare(b.title);
+});
 
 const filteredCatalog = () => {
   let items = [...state.catalog];

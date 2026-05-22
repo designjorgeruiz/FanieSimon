@@ -243,8 +243,8 @@ button { border: 0; background: none; color: inherit; cursor: pointer; }
   height: 100svh;
   min-height: 620px;
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
 }
 .hero-full__video-wrap {
@@ -280,23 +280,21 @@ button { border: 0; background: none; color: inherit; cursor: pointer; }
 .hero-full__overlay {
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(0deg, rgba(8,3,1,0.96) 0%, rgba(8,3,1,0.82) 22%, rgba(8,3,1,0.42) 46%, rgba(8,3,1,0.1) 66%, transparent 84%),
-    linear-gradient(180deg, rgba(8,3,1,0.18) 0%, transparent 24%);
+  background: rgba(8,3,1,0.52);
   pointer-events: none;
 }
 
 .hero-full__content {
   position: relative;
   z-index: 2;
-  text-align: left;
+  text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: 14px;
   padding: 0 clamp(28px, 5.5vw, 80px) clamp(64px, 8vw, 108px);
   width: 100%;
-  max-width: min(720px, 100%);
+  max-width: 860px;
 }
 .hero-full__eyebrow {
   font-size: 0.68rem;
@@ -316,7 +314,7 @@ button { border: 0; background: none; color: inherit; cursor: pointer; }
 }
 .hero-full__rule {
   width: 40px; height: 1px;
-  background: linear-gradient(90deg, var(--gold), rgba(196,154,90,0.2));
+  background: var(--gold);
 }
 .hero-full__tagline {
   font-size: clamp(0.74rem, 1.3vw, 0.88rem);
@@ -337,9 +335,8 @@ button { border: 0; background: none; color: inherit; cursor: pointer; }
 .hero-full__scroll {
   position: absolute;
   bottom: 40px;
-  right: clamp(28px, 5.5vw, 80px);
-  left: auto;
-  transform: none;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 2;
   display: flex;
   flex-direction: column;
